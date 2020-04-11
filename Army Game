@@ -1,0 +1,55 @@
+ int even(int n,int m)
+ {
+     //both are even
+     return n*m/4;
+ }
+ int oneeven(int n,int m)
+ {
+     //m is even
+     return(m*(n-1)/)+m/2;
+ }
+int gameWithCells(int n, int m) 
+{
+    /*
+     * Write your code here.
+     */
+    int supply{};
+    if(n==1||m==1)
+    {
+        if((n*m)%2==0)
+        {
+            supply=n*m/2;
+        }
+        else
+        {
+            supply=(n*m/2)+1;
+        }
+    }
+    else
+    {
+        if(n%2!=0&&m%2!=0)
+        {
+            //oddodd
+            supply=even(n-1,m-1);
+            supply=supply+((n-1)/2)+((m/2)+1);
+        }
+        else if(n%2==0&&m%2==0)
+        {
+            //both are even
+            supply=even(n,m);
+        }
+        else if(n%2==0&&m%2!=0)
+        {
+            //n is even and m is odd
+            supply=oneeven(m,n);
+        }   
+        else if(m%2==0&&n%2!=0)
+        {
+            //m is even and n is odd
+            supply=oneeven(n,m);
+        }
+    }
+    
+    return supply; 
+
+}
