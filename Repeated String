@@ -1,0 +1,24 @@
+long repeatedString(string s, long n) 
+{
+    long a{},as{};
+    long int strlen=s.size();
+    for(long int i=0;i<strlen;i++)
+    {
+        if(s[i]=='a')
+        {
+            as++;
+        }
+    }
+    long int b=n%strlen;
+    long int c=n/strlen;
+    for(long int i=0;i<b;i++)
+    {
+        if(s[i]=='a')
+        {
+            a++;
+        }
+    }
+    a=a+(as*c);
+    
+    return a;
+}
