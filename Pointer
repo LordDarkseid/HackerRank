@@ -1,0 +1,10 @@
+void update(int *a,int *b) {
+    // Complete this function   
+    int temp1=*a;
+    unsigned int temp2=*b;
+    *a=temp1+temp2;
+    if(temp1>temp2)
+    *b=temp1-temp2;
+    else
+    *b= temp2-temp1;
+}
