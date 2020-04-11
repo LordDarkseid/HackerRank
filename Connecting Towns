@@ -1,0 +1,9 @@
+int connectingTowns(int n, vector<int> routes) 
+{
+    int a{1};
+    for(int i=0;i<n-1;i++)
+    {
+        a=a*routes[i]%1234567;
+    }
+    return a;
+}
