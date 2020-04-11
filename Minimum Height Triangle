@@ -1,0 +1,21 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    float b{},a{};
+    int h{};
+    cin>>b>>a;
+    cout<<fixed;
+    if(a==0||b==0)
+    cout<<"0";
+    else
+    h=ceil(2*a/b);
+    cout<<h;
+    return 0;
+}
