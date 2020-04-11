@@ -1,0 +1,4 @@
+long long summingSeries(long long n) 
+{
+    return ((n%1000000007)*(n%1000000007))%1000000007;
+} 
