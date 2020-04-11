@@ -1,0 +1,4 @@
+long long solve(long long int n,long long int m) 
+{
+    return m*n-1;
+}
