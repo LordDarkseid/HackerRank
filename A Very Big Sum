@@ -1,0 +1,9 @@
+long long int aVeryBigSum(vector<long> ar,int ar_count) 
+{
+    long long int sum{};
+    for(int i=0;i<ar_count;i++)
+    {
+        sum=sum+ar.at(i);
+    }
+    return sum;
+}
