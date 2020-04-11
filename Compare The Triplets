@@ -1,0 +1,21 @@
+vector<int> compareTriplets(vector<int> a, vector<int> b) 
+{
+    int score_a{},score_b{};
+    for(int i=0;i<3;i++)
+    {
+        if(a[i]==b[i])
+        {}
+        else if(a[i]>b[i])
+        {
+            score_a++;
+        }
+        else if(a[i]<b[i])
+        {
+            score_b++;
+        }
+    }
+    vector<int>score;
+    score.push_back(score_a);
+    score.push_back(score_b);
+    return score;
+}
