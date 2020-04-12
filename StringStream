@@ -1,0 +1,14 @@
+vector<long> parseInts(string str) {
+	// Complete this function
+    char ch;
+    stringstream ss(str);
+    int a;
+    vector<long>ans{};
+   while(ss>>a)
+   {
+       ans.push_back(a);
+       ss>>ch;
+   }
+
+    return ans;
+}
