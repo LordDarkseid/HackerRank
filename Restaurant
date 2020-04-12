@@ -1,0 +1,4 @@
+int restaurant(int l, int b) 
+{   
+    return (l*b)/pow(__gcd(l,b),2);
+}
