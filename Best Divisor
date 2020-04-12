@@ -1,0 +1,49 @@
+#include <algorithm>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int sumdiv(int n)//sum of elements of divisors
+{
+    int s{};
+    while(n>=1)
+    {   
+        s+=n%10;
+        n=n/10;
+    }
+    return s;
+}
+
+int main()
+{
+    int n;
+    cin >> n;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    vector <int> div;
+    for(int i=1;i<=n/2;i++)//created vector of divisors
+    {
+        if(n%i==0)
+        {
+            div.push_back(i);
+        }
+    }
+    div.push_back(n);
+    vector<int> sum;
+    for (int i=0;i<div.size();i++)
+    {
+        sum.push_back(sumdiv(div[i]));
+    }
+    int max_div;
+    max_div=*max_element(sum.begin(),sum.end());
+    int count{-1};
+    for(int j=0;j<sum.size();j++)
+    {
+        count++;
+        if(sum[j] == max_div)
+        {
+            break;
+        }
+    }
+    cout<<div[count];
+    return 0;
+}
