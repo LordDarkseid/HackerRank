@@ -1,0 +1,28 @@
+ long double result(long l,long s1,long s2,double q)
+ {
+     return (sqrt(2)*(l-sqrt(q))/(s1-s2));
+ }
+vector<long double> movingTiles(long double l, long double s1,long double s2, vector<long double> queries) 
+{
+    double t{};
+    vector<long double>q;
+    size_t s=queries.size();
+    for(long i=0;i<s;i++)
+    {
+        if(queries[i]>=l*l)
+        {
+            q.push_back(0);
+        }
+        else if(s2>s1)
+        {
+            t=result(l,s2,s1,queries[i]);
+            q.push_back(t);
+        }
+        else if(s1>s2)
+        {
+            t=result(l,s1,s2,queries[i]);
+            q.push_back(t);
+        }
+    }
+    return q;
+}
