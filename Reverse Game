@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    long t;
+    cin>>t;
+    long n;
+    long k;
+    int a{};
+    vector<long>balls;
+    for(long i=0;i<t;i++)
+    {
+        cin>>n>>k;
+        long j=0;
+        for(;j<n;j++)
+        {
+            balls.push_back(j);
+        }
+        if(k<(n-1)/2)
+        cout<<2*k+1<<endl;
+        else
+        cout<<2*(n-k-1)<<endl;
+    }
+    return 0;
+}
