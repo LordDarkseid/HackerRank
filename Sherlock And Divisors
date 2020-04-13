@@ -1,0 +1,16 @@
+int divisors(int n)
+{   
+    int ans{};
+    int sq=sqrt(n);
+    for(int i=1;i<=sq;i++)
+    {
+        if(n%i==0)
+        {
+            if(i%2==0)
+            ans++;
+            if(i!=n/i&&(n/i)%2==0)
+            ans++;
+        }
+    }
+    return ans;
+}
