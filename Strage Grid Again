@@ -1,0 +1,15 @@
+long long strangeGrid(long long r, int c) 
+{  
+    long long ans{};
+    int r_odd[]{0,2,4,6,8};
+    if(r%2==0)
+    {
+        ans=1+r_odd[c-1]+(r-2)*5;
+    }
+    if(r%2!=0)
+    {
+        ans=r_odd[c-1]+(r-1)*5;
+    }
+
+    return ans;
+}
