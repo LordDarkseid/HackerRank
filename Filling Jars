@@ -1,0 +1,10 @@
+long solve(int n, vector<vector<long>> op, int m) 
+{
+    long total{};
+    for(int i=0;i<m;i++)
+    {
+        total=total +(op[i][1]-op[i][0]+1)*op[i][2];
+    }
+    long avg=floor(total/n);
+    return avg;
+}
