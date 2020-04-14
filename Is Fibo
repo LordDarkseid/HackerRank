@@ -1,0 +1,15 @@
+string solve(long n) 
+{
+    string yes="IsFibo",no="IsNotFibo";
+    long long a{1},b{};
+    long long c=a+b;
+    while(c<=n)
+    {
+        if(c==n)
+        return yes;
+        b=a;
+        a=c;
+        c=a+b;
+    }
+    return no;
+}
