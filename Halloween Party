@@ -1,0 +1,5 @@
+unsigned long long int halloweenParty(int k) 
+{
+    long long h_cuts=k-k/2;
+    return (k/2)*h_cuts;
+}
