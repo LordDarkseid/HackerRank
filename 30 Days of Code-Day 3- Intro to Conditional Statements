@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin >> n;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    string ans{},w{"Weird"},nw{"Not Weird"};
+    if(n%2!=0)
+    ans=w;
+    else
+    {
+        if(n==2||n==4)
+        ans=nw;
+        else if(n>=6&&n<=20)
+        ans=w;
+        else if(n>20)
+        ans=nw;
+    }
+    cout<<ans;
+
+    return 0;
+}
