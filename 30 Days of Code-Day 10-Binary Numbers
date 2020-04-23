@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n,b,count{};
+    cin >> n;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    vector<int>binary;
+    vector<int>max;
+    while(n>0)
+    {
+        b=n%2;
+        n=n/2;
+        binary.push_back(b);
+    }
+    int s=binary.size();
+    for(int i=0;i<s;i++)
+    {
+        if(binary[i]==1)
+        count++;
+        max.push_back(count);
+        if(binary[i]==0)
+        count=0;
+    }
+    int m=*max_element(max.begin(),max.end());
+    cout<<m;
+
+    return 0;
+}
