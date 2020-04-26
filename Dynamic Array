@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n,q,t,x,y,lastAns{};
+    cin>>n>>q;
+    vector<vector<int>>v(n,vector<int>());
+    for(int i=0;i<q;i++)
+    {
+        cin>>t>>x>>y;
+        if(t==1)
+        {
+            v[(x^lastAns)%n].push_back(y);
+        }
+        else if(t==2)
+        {
+            lastAns=v[(x^lastAns)%n][y%v[(x^lastAns)%n].size()];
+            cout<<lastAns<<endl;
+        }
+    }
+    return 0;
+}
