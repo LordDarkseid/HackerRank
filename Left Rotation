@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n,d,t;
+    cin>>n>>d;
+    vector<int>v(n);
+    for(int i=0;i<n;i++)
+    {
+        if(i-d<0)
+        {t=i-d+n;}
+        else
+        {t=i-d;}
+        cin>>v[t];
+    }
+    for(int i=0;i<n;i++)
+    {cout<<v[i]<<" ";}
+
+    return 0;
+}
