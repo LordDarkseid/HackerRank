@@ -1,0 +1,30 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() 
+{
+    int n,x,lower;
+    vector<int>v;
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        cin>>x;
+        v.push_back(x);
+    }
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        cin>>x;
+        lower=lower_bound(v.begin(),v.end(),x)-v.begin();
+        if(v[lower]==x)
+        cout<<"Yes "<<lower+1<<endl;
+        else
+        cout<<"No "<<lower+1<<endl;
+    }
+    return 0;
+}
