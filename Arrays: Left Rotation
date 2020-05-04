@@ -1,0 +1,23 @@
+#include<iostream>
+#include<algorithm>
+#include<vector>
+
+using namespace std;
+
+int main()
+{
+    int n,d;
+    cin>>n>>d;
+    vector<int>v(n);
+    for(int i=0;i<n;i++)
+    {
+        if(i-d>=0)
+        cin>>v[i-d];
+        else
+        cin>>v[i-d+n];
+    }
+    for(int i=0;i<n;i++)
+    {cout<<v[i]<<" ";}
+
+    return 0;
+}
