@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+#include <sstream>
+
+using namespace std;
+
+int main()
+{
+    string t,h;
+    cin>>t;
+    h=t.substr(0,2);
+    if(t[8]=='A'&&h=="12")
+    {
+        h="00";
+    }
+    if(t[8]=='P'&&h!="12")
+    {
+        h=to_string(stoi(t.substr(0,2))+12);
+    }
+    cout<<h<<t.substr(2,6);
+
+    return 0;
+}
