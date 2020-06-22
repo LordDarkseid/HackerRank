@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+    char ch,s[9],sen[15],ws[2];
+    scanf("%c",&ch);
+    gets(ws);
+    gets (s);
+    gets (sen);
+    printf("%c\n",ch);
+    puts(s);
+    puts(sen);   
+
+    return 0;
+}
